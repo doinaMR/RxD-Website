@@ -189,6 +189,10 @@ footer {
   padding: 1.5rem 5rem 4rem 5rem;
 }
 
+.footer-logo-name img:hover {
+  filter: none;
+}
+
 .footer-logo-name img {
   height: 15rem;
   filter: opacity(70%);
@@ -202,7 +206,7 @@ footer {
 
 .footer-contact a {
   text-decoration: none;
-  color: #ffffff;
+  color: #ccc;
 }
 
 .footer-contact > a:hover {

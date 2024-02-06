@@ -175,6 +175,10 @@ footer {
   bottom: 0;
 }
 
+.footer-logo-name img:hover {
+  filter: none;
+}
+
 .footer-logo-name img {
   height: 15rem;
   filter: opacity(70%);
@@ -188,7 +192,7 @@ footer {
 
 .footer-contact a {
   text-decoration: none;
-  color: #ffffff;
+  color: #ccc;
 }
 
 .footer-contact > a:hover {
