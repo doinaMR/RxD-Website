@@ -1,0 +1,213 @@
+html {
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #262626;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* adaptam textul in functie de screen size */
+@media (min-width: 1300px) {
+  html {
+    font-size:11px;
+  }
+}
+
+@media (min-width: 1400px) {
+  html {
+    font-size:12px;
+  }
+}
+
+@media (min-width: 1500px) {
+  html {
+    font-size:13px;
+  }
+}
+
+@media (min-width: 1600px) {
+  html {
+    font-size:14px;
+  }
+}
+
+@media (min-width: 1700px) {
+  html {
+    font-size:15px;
+  }
+}
+
+@media (min-width: 1800px) {
+  html {
+    font-size:16px;
+  }
+}
+/* /adaptam textul in functie de screen */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+h1 {
+  font-size: 3.2rem;
+  line-height: normal;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.3rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  word-break: keep-all;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  letter-spacing: .05rem;
+}
+
+/* HEADER */
+header {
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display:flex; /*cu flex sispace-between specificam ca copii de mai jos sa fie departati*/
+  justify-content:space-between; 
+  align-items: center;
+  height: 10rem;
+  padding: 2rem 5rem;
+  z-index: 1;
+}
+
+.logo {display: inline-block;}
+.logo > img { 
+  height: 7rem;
+}
+
+.top-nav-bar {
+  display: inline-block;
+  text-align: center;
+}
+
+.top-nav-bar > a {
+  display: inline-block;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #262626;
+  margin-right: 1rem;
+}
+
+.top-nav-bar > a:last-child {
+  margin-right: 0;
+}
+
+.top-nav-bar > a:hover {
+  color: rgb(255, 222, 89);
+}
+
+.logo > img:hover {
+  filter: brightness(10%);
+}
+
+@media (max-width:767px), (max-width:812px) and (orientation:landscape) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+  .top-nav-bar {
+    padding-left: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width:580px) {
+  .logo > img { 
+    height: 5rem;
+  }
+  .top-nav-bar > a {
+    font-size: 1.5rem;
+  }
+  .top-nav-bar {
+    padding-left: 2.6rem;
+  }
+  .under-header {
+    top: 12rem;
+    padding-left: 7.5rem;
+  }
+}
+/* /HEADER */
+
+/* FOOTER */
+footer {
+  display:flex; /*cu flex si space-between specificam ca copii acestuia sa fie departati*/
+  justify-content:space-between; 
+  align-items: center;
+  background-color: #262626;
+  height: auto;
+  width: 100%;
+  color: #ccc;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2rem;
+  padding: 1.5rem 7rem 4rem 5rem;
+  position: relative;
+  bottom: 0;
+}
+
+.footer-logo-name img {
+  height: 15rem;
+  filter: opacity(70%);
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-contact a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer-contact > a:hover {
+  color: #b93535;
+}
+
+@media (max-width:580px) {
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-contact, .footer-address {
+    margin: 0 0 1.5rem 1rem;
+  }
+}
+
+@media (max-width:767px), (max-width:812px) and (orientation:landscape) {
+  footer {
+    padding: 1.5rem 3.5rem 4rem 3.5rem;
+  }
+}
+/* /FOOTER */

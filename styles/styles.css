@@ -1,0 +1,227 @@
+html {
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(58, 58, 58);
+  margin: 0;
+  letter-spacing: .05rem;
+}
+
+/* HOME PAGE SETTINGS */
+.section-block {
+  height: 100vh;
+}
+
+.carousel-container {
+width: 100vw;
+height: 100vh;
+position: relative;
+}
+
+.navigation-buttons .previous {
+left: 1rem;
+}
+
+.navigation-buttons .next {
+right: 1rem;
+}
+
+.navigation-buttons .nav-btn {
+cursor: pointer;
+position: absolute;
+width: 10rem;
+height: 10rem;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 2rem;
+top: 50%;
+z-index: 10;
+color: rgb(255, 255, 255);
+}
+
+.navigation-buttons .nav-btn:hover {
+  transition: all .25s ease-in-out;
+  stroke: black;
+}
+/* Cu setarile de mai jos stilizam sagetile de back si forward */
+.a {
+  fill:none;
+  stroke:#ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width:0.8662px;
+}
+
+.navigation-buttons .previous:hover {
+  transform: translateX(1rem) scale(1.2);
+}
+  
+.navigation-buttons .next:hover {
+  transform: translateX(-1rem) scale(1.2);
+}
+
+.slider-carousel {
+  transition: 200ms opacity ease-in-out;
+}
+.slider-carousel img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.images {
+position: absolute;
+inset: 0;
+display: none;
+z-index: -1;
+}
+
+.main {
+display: block;
+transition-delay: 0ms;
+z-index: -1;
+}
+
+@media (max-width:767px), (max-width:812px) and (orientation:landscape) {
+  .navigation-buttons .nav-btn {
+    width: 5rem;
+    height: 5rem;
+    padding: 1rem;
+    }
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display:flex; /*cu flex sispace-between specificam ca copii de mai jos sa fie departati*/
+  justify-content:space-between; 
+  align-items: center;
+  height: 10rem;
+  padding: 2rem 5rem;
+  z-index: 1;
+}
+
+.logo {display: inline-block;}
+.logo > img { 
+  height: 7rem;
+}
+
+.top-nav-bar {
+  display: inline-block;
+  text-align: center;
+}
+
+.top-nav-bar > a {
+  display: inline-block;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #ffffff;
+  margin-right: 1rem;
+}
+
+.top-nav-bar > a:last-child {
+  margin-right: 0;
+}
+
+.top-nav-bar > a:hover {
+  color: #4f4f4f;
+}
+
+.logo > img:hover {
+  filter: brightness(30%);
+}
+
+@media (max-width:767px), (max-width:812px) and (orientation:landscape) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .top-nav-bar {
+    padding-left: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width:580px) {
+  .logo > img { 
+    height: 5rem;
+  }
+  .top-nav-bar > a {
+    font-size: 1.5rem;
+  }
+  .top-nav-bar {
+    padding-left: 2.6rem;
+  }
+}
+/* /HEADER */
+
+/* Footer */
+footer {
+  display:flex; /*cu flex sispace-between specificam ca copii acestuia sa fie departati*/
+  justify-content:space-between; 
+  align-items: center;
+  background-color: #262626;
+  height: auto;
+  width: 100%;
+  color: #ccc;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2rem;
+  padding: 1.5rem 5rem 4rem 5rem;
+}
+
+.footer-logo-name img {
+  height: 15rem;
+  filter: opacity(70%);
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-contact a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer-contact > a:hover {
+  color: #b93535;
+}
+
+@media (max-width:580px) {
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-contact, .footer-address {
+    margin: 0 0 1.5rem 1rem;
+  }
+}
+
+@media (max-width:767px), (max-width:812px) and (orientation:landscape) {
+  footer {
+    padding: 1.5rem 3.5rem 4rem 3.5rem;
+  }
+}
+/* /Footer */

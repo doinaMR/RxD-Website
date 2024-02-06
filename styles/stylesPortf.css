@@ -1,0 +1,180 @@
+/* HOME PAGE SETTINGS */
+.section-block {
+  display: block;
+  height: auto; /* aici era height: 100vh; si cu asta setam ca footerul sa apara la un scroll*/
+}
+/*cu setarea de sus: Height:auto,*/
+/*in loc de 100vh(care era dimensiune fixa = cat e ecranul), am setat ca sectiunea de*/
+/*imagini sa se adapteze dupa continut, in functie de dimensiunea ecranului, si asta a rezultat*/
+/*ca footerul sa inceapa unde se termina sectiunea de poze si se adapteaza in functie de screen-size*/
+/* HOME PAGE SETTINGS */
+
+/* HEADER */
+.under-header {
+  background-color: #ffffff;
+  top: 10rem;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 3.5rem;
+  padding: 1rem 5rem;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  z-index: 1;
+}
+
+@media (max-width:767px), (max-width:812px) and (orientation:landscape) {
+  .under-header {
+    top: 15rem;
+    padding-left: 8.5rem;
+  }
+}
+
+/* /HEADER */
+
+/* WORK Gallery SECTION */
+.work-gallery {
+  position: relative;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.work-gallery .work-list {
+  position: relative;
+  height: auto;
+  width: 90%;
+  margin: auto;
+  padding: 3.5rem 0;
+  display: grid;
+  grid-template-columns: auto auto auto; /* am scris de 2ori auto ca sa fac 2 coloane */
+  grid-gap: 2vmin;
+  grid-auto-flow: dense;
+}
+
+.work-gallery .work-list .preload-image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.9);
+}
+
+.work-gallery .work-list .work-list-item:first-child {
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+}
+
+.work-gallery .work-list .work-list-item:nth-child(2n+3) {
+  grid-row-start: span 2;
+}
+
+.work-gallery .work-list .work-list-item:nth-child(4n+5) {
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+}
+
+.work-gallery .work-list .work-list-item:nth-child(6n+7) {
+  grid-row-start: span 1;
+}
+
+.work-gallery .work-list .work-list-item:nth-child(8n+9) {
+  grid-column-start: span 1;
+  grid-row-start: span 1;
+}
+
+.work-gallery .work-list .work-list-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.7) grayscale(100);
+  transition: 0.3s ease-in-out;
+}
+
+.work-list-item {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.work-list-item .work-title {
+  position: absolute;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  font-size: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+.caps {
+  margin-right: -1rem;
+}
+
+.work-gallery .work-list h1.work-title span.caps+span {
+  opacity: 0;
+  transition: opacity .25s ease-out;
+}
+
+.work-gallery .work-list .work-list-item:hover h1.work-title span.caps+span {
+  opacity: 1;
+  transition: opacity .25s ease-out;
+}
+
+.work-gallery .work-list .work-list-item:hover img {
+  filter: brightness(1) grayscale(0);
+}
+
+/* media querie pt modul de dispunere a imaginilor */
+@media only screen and (max-width:767px) {
+  .work-gallery .work-list {
+    grid-template-columns: auto auto;
+  }
+
+  .work-gallery .work-list .work-list-item:last-child {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .work-gallery .work-list {
+    display: block;
+  }
+
+  .work-gallery .work-list .work-list-item {
+    width: 100%;
+    height: 100%;
+    margin: 2%;
+  }
+
+  .work-gallery .work-list .work-list-item img {
+    filter: brightness(1) grayscale(0);
+  }
+}
+/* /media querie pt titlurile imaginilor */
+@media (max-width: 2230px) {
+  .word-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .word-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .word-1 .caps {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .work-list-item .work-title {
+    text-shadow: 2px 2px 8px #363636;
+  }
+}

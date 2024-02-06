@@ -1,0 +1,216 @@
+.row-fluid-wrapper::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+[class*="col-"] {
+  float: left;
+  /* padding: auto;
+  border: 1px solid red; */
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.container-fluid {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-top: 18.5rem;
+}
+
+/* ---------Inceput de conainer matriosca */
+/*Stilul matriosca: container in alt conainer-
+fiecaruia ii setam o anumita pozitie fata de containerul
+cel mai apropiat in care este continut
+1.Mai jos setam containerul strastrabunic*/
+.container-fluid .row-fluid-wrapper {
+  position: relative;
+  height: auto;
+  width: 90%;
+  margin: auto;
+}
+/*2.Mai jos setam containerul strabunic*/
+.cos-fluid-wrapper {
+  padding: 0 30rem 0 30rem;
+}
+
+@media (max-width: 1200px) {
+  .cos-fluid-wrapper {
+    padding-right: 0;
+  }
+}
+
+/*3.Mai jos setam containerul bunic*/
+.align-right {
+  padding-right: 1rem;
+}
+
+/*4.Mai jos setam containerul tata*/
+.media-container-right {
+  float: right;
+  padding-bottom: 2rem;
+}
+/*4.Mai jos setam copilul*/
+img.fluid-s-image {
+  width: 40rem;
+  height: auto;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media (max-width: 600px) {
+  img.fluid-s-image {
+    width: 30rem;
+  }
+}
+/* ---------final container matriosca */
+
+/* Container text p-block 1-----(tot un fel de matriosca la nivel de div-uri) */
+.sin-fluid-wrapper {
+  width: 55%;
+}
+
+.p-block {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: inline-block;
+  margin: 0 1.4% 6.5rem 6.5rem;
+}
+
+.p-block::first-letter, .p-block-right::first-letter {
+  font-size: 4.25rem;
+  line-height: 0.3;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.p-block > p, .p-block-right > p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: normal;
+  letter-spacing: 0.12em;
+  text-transform: none;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+@media (max-width: 600px) {
+  .sin-fluid-wrapper {
+    width: auto;
+  }
+
+  .p-block {
+    margin: 0;
+  }
+}
+/* /Container text p-block 1 */
+
+img.fluid-l-image {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  object-fit: cover;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.media-full-width {
+  display: inline-block;
+  margin-bottom: 6.5rem;
+}
+
+.align-left {
+  padding-left: 1rem;
+}
+
+.media-container-left {
+  float: left;
+  padding-bottom: 2rem;
+}
+
+.tg-fluid-wrapper {
+  padding: 0 30rem 0 30rem;
+}
+
+@media (max-width: 1200px) {
+  .tg-fluid-wrapper {
+    padding-left: 0;
+  }
+}
+
+/* setari pentru p-block-right */
+.p-block-right {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 0 6.5rem 6.5rem 1.4%;
+}
+
+.go-right {
+  float: right;
+}
+
+@media (max-width: 600px) {
+  .p-block-right {
+    margin: 0;
+  }
+}
+/* /setari pentru p-block-right */
+
+.ctg-fluid-wrapper {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-button {
+  padding-bottom: 6.5rem;
+  margin: auto;
+}
+
+.bottom-button > a {
+  border: 1px solid #262626;
+  color: #262626;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0;
+  line-height: 1.5;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+a, a:focus, a:hover {
+  text-decoration: none;
+}
+
+.bottom-button > a:hover  {
+  transition: all .15s ease-in-out;
+  color: rgb(255, 222, 89);
+  border: 1px solid rgb(255, 222, 89);
+}
