@@ -94,6 +94,12 @@ header {
   margin-bottom: 10rem;
 }
 
+.RD-partner-profile {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .partner-profile-profile {
   width: 30%;
   display: block;
@@ -112,7 +118,17 @@ header {
   transition: opacity .4s ease-in-out;
 }
 
+.RD-partner-profile .partner-profile-photo img {
+  width: 100%;
+  filter: grayscale(100%);
+  transition: opacity .4s ease-in-out;
+}
+
 .RI-partner-profile:hover .partner-profile-photo img {
+  filter: grayscale(0);
+}
+
+.RD-partner-profile:hover .partner-profile-photo img {
   filter: grayscale(0);
 }
 
@@ -155,6 +171,12 @@ header {
     width: 100%;
   }
 
+  .RD-partner-profile {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
   .partner-profile-profile {
     width: 100%;
     margin-bottom: 2rem;
@@ -167,22 +189,14 @@ header {
   .partner-profile-bio p  {
     margin-top: 0;
   }
-}
 
-.RD-partner-profile {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.RD-partner-profile .partner-profile-photo img {
-  width: 100%;
-  filter: grayscale(100%);
-  transition: opacity .4s ease-in-out;
-}
-
-.RD-partner-profile:hover .partner-profile-photo img {
-  filter: grayscale(0);
+  .RI-partner-profile .partner-profile-photo img {
+    filter: none;
+  }
+  
+  .RD-partner-profile .partner-profile-photo img {
+    filter: none;
+  }
 }
 
 
